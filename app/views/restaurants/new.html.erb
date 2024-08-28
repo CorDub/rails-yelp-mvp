@@ -1,0 +1,11 @@
+<h1>OH YOU THOUGHT WE WOULDNT BE STILL THE BEST</h1>
+<h2>WELL GUESS WHAT BOYO WE STILL ARE</h2>
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category do %>
+    <%= f.select :category, ["chinese", "italian", "japanese", "french", "belgian"] %>
+  <% end %>
+  <%= f.submit %>
+<% end %>

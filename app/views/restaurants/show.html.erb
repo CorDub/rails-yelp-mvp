@@ -1,0 +1,12 @@
+<h1>STILL THE BEST YELP AROUND</h1>
+<h2>YEAH BUDDY</h2>
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<h2>THEM DANG REVIEWS</h2>
+<ul>
+<% @restaurant.reviews.each do |review| %>
+  <li><p><%= review.content %></p><h3><%= review.rating %></h3></li>
+<% end %></ul>
+<%= link_to "Add a new review", new_restaurant_review_path(@restaurant.id)%>
+<%= link_to "Back", restaurants_path %>
